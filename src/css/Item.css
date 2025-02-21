@@ -1,0 +1,16 @@
+/* src/css/Item.css */
+.image {
+  width: 100%; /* Ajusta el tamaño al 100% del contenedor */
+  height: auto; /* Mantén la proporción de las imágenes */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.card {
+  max-width: 300px; /* Establece un tamaño máximo para la tarjeta */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

@@ -1,0 +1,116 @@
+/* Checkout.css */
+
+  /* button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: darkred;
+  } */
+
+  /* Contenedor principal del checkout */
+  .checkout-container {
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadí sombra sutil para resaltar */
+  }
+  
+  /* Resumen del carrito */
+  .cart-summary {
+    margin-bottom: 30px;
+  }
+  
+  .cart-summary h3 {
+    color: #f39c12;
+  }
+  
+  .cart-summary ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-summary li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+  }
+  
+  .checkout-message {
+    color: #28a745; /* Mensajes de éxito */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Aumenté el espacio entre los campos */
+  }
+  
+  /* Estilos de las etiquetas y campos de entrada */
+  .checkout-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #ccc; /* Color gris para las etiquetas */
+  }
+  
+  .checkout-form input {
+    padding: 10px; /* Aumenté el padding para hacerlo más espacioso */
+    font-size: 16px;
+    border: 1px solid #444; /* Color de borde más oscuro */
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #222; /* Fondo más oscuro para los inputs */
+    color: white; /* Texto blanco en los inputs */
+  }
+  
+  .checkout-submit {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Añadí sombra para más enfoque */
+  }
+  
+  .checkout-submit:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el mouse */
+  }
+  
+  .back-to-store {
+    margin-top: 20px;
+  }
+  
+  .back-to-store button {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para los botones */
+  }
+  
+  .back-to-store button:hover {
+    background-color: #e67e22;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+  }
+  

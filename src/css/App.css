@@ -1,0 +1,19 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(10,10,10);
+    background: linear-gradient(90deg, rgba(10,10,10,1) 95%, rgba(112,111,5,1) 100%);
+    color: white; /* Para que el texto se vea blanco sobre el fondo negro */
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  div {
+    padding: 20px;
+  }
+  
