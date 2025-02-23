@@ -1,18 +1,4 @@
-/* Checkout.css */
 
-  /* button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-left: 10px;
-  }
-  
-  button:hover {
-    background-color: darkred;
-  } */
 
   /* Contenedor principal del checkout */
   .checkout-container {
@@ -20,7 +6,7 @@
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #333;
+    background-color: #333333;
     border-radius: 10px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadí sombra sutil para resaltar */
@@ -97,7 +83,7 @@
   .back-to-store {
     margin-top: 20px;
   }
-  
+  /*boton volver tienda*/
   .back-to-store button {
     background-color: #f39c12;
     color: white;
@@ -114,3 +100,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
   }
   
+form{
+ background-color: #222;
+}

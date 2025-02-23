@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import "../css/Checkout.css";
 
 const Checkout = () => {
   const { carrito, eliminarDelCarrito, vaciarCarrito } = useCart();
@@ -25,11 +26,11 @@ const Checkout = () => {
   };
 
   return (
-    <div style={{ padding: "20px", textAlign: "center", backgroundColor: "#f8f9fa", borderRadius: "10px" }}>
+    <div style={{ padding: "40px", textAlign: "center", backgroundColor: "black", borderRadius: "50px" }}>
       <h2>Resumen de Compra</h2>
 
       {/* Mensaje de estado */}
-      {mensaje && <p style={{ color: "#28a745", fontWeight: "bold" }}>{mensaje}</p>}
+      {mensaje && <p style={{ color: "violet", fontWeight: "bold" }}>{mensaje}</p>}
 
       {carrito.length === 0 ? (
         <div>
@@ -44,13 +45,13 @@ const Checkout = () => {
                 <img
                   src={producto.imagen}
                   alt={producto.nombre}
-                  style={{ width: "50px", height: "50px", objectFit: "cover" }}
+                  style={{ width: "150px", height: "150px", objectFit: "cover" }}
                 />
                 <p>{producto.nombre} x {producto.cantidad}</p>
                 <p>${producto.precio * producto.cantidad}</p>
                 <button
                   onClick={() => eliminarDelCarrito(producto.id)}
-                  style={{ padding: "5px", backgroundColor: "#dc3545", color: "white", border: "none", cursor: "pointer" }}
+                  style={{ padding: "5px", backgroundColor: "lightblue", color: "white", border: "none", cursor: "pointer" }}
                 >
                   ❌
                 </button>
@@ -75,7 +76,7 @@ const Checkout = () => {
               style={{ padding: "8px", width: "80%", marginBottom: "10px" }}
             />
 
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">Email donde enviaremos el comprobante de pago</label>
             <input
               type="email"
               id="email"
@@ -84,7 +85,7 @@ const Checkout = () => {
               style={{ padding: "8px", width: "80%", marginBottom: "10px" }}
             />
 
-            <label htmlFor="direccion">Dirección:</label>
+            <label htmlFor="direccion">Dirección donde enviaremos el comprobante de pago</label>
             <input
               type="text"
               id="direccion"
@@ -93,7 +94,7 @@ const Checkout = () => {
               style={{ padding: "8px", width: "80%", marginBottom: "20px" }}
             />
 
-            <button type="submit" style={{ padding: "10px 20px", backgroundColor: "#28a745", color: "white", border: "none", cursor: "pointer" }}>
+            <button type="submit" style={{ padding: "10px 20px", backgroundColor: "black", color: "gold", border: "none", cursor: "pointer" }}>
               Confirmar Compra
             </button>
           </form>
