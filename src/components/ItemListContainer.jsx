@@ -26,7 +26,7 @@ const ItemListContainer = () => {
 
   return (
     <div className="container"> {/* Usar la clase de CSS */}
-      <h2>Lista de Productos</h2>
+      <h2>Catálogo Old School</h2>
       <div className="grid"> {/* Usar la clase de CSS */}
         {productos.map((producto) => (
           <Item key={producto.id} producto={producto} />

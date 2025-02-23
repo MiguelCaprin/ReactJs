@@ -30,6 +30,7 @@
   } */
    /************************************************************************************/
 /* Contenedor principal del carrito */
+
 .cart-container {
   padding: 20px;
   text-align: center;
@@ -37,7 +38,7 @@
   margin: 0 auto;
   background-color: #333; /* Fondo oscuro para el carrito */
   border-radius: 10px; /* Bordes redondeados */
-}
+  }
 
 /* Estilos para las imágenes del carrito */
 .cart-image {

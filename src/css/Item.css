@@ -1,16 +1,38 @@
 /* src/css/Item.css */
-.image {
-  width: 100%; /* Ajusta el tamaño al 100% del contenedor */
-  height: auto; /* Mantén la proporción de las imágenes */
-  border-radius: 8px; /* Bordes redondeados */
-}
-
 .card {
-  max-width: 300px; /* Establece un tamaño máximo para la tarjeta */
+ 
   margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.image {
+  width: 80%; /* Ajusta el tamaño al 100% del contenedor */
+  height: 60%; /* Mantén la proporción de las imágenes */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+
+
+.button{
+  font-size: 20px;
+  font-family: "Molle", serif;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+  background: linear-gradient(45deg, #ffd700, #ffae00);
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 3px solid goldenrod;
+  box-shadow: 0 5px 15px rgba(218, 165, 32, 0.7);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px gold;
 }
