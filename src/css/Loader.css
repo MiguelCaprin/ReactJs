@@ -12,8 +12,8 @@
   }
   
   .logo-animation {
-    width: 80vw; /* Un tamaño grande pero sin pasarse */
-    max-width: 90%; /* Evita que sea más ancho de lo necesario */
+    width: 90vw; /* Un tamaño grande pero sin pasarse */
+    max-width: 100%; /* Evita que sea más ancho de lo necesario */
     height: auto; /* Mantiene la proporción */
     max-height: 80vh; /* Limita la altura para que no se corte */
     display: block; /* Asegura que no haya margen extra */
