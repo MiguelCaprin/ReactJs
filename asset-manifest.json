@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/MiguelCaprin/ReactJs.git/static/css/main.3bf69b57.css",
-    "main.js": "/MiguelCaprin/ReactJs.git/static/js/main.1e49910d.js",
+    "main.js": "/MiguelCaprin/ReactJs.git/static/js/main.75c886c6.js",
     "index.html": "/MiguelCaprin/ReactJs.git/index.html",
     "main.3bf69b57.css.map": "/MiguelCaprin/ReactJs.git/static/css/main.3bf69b57.css.map",
-    "main.1e49910d.js.map": "/MiguelCaprin/ReactJs.git/static/js/main.1e49910d.js.map"
+    "main.75c886c6.js.map": "/MiguelCaprin/ReactJs.git/static/js/main.75c886c6.js.map"
   },
   "entrypoints": [
     "static/css/main.3bf69b57.css",
-    "static/js/main.1e49910d.js"
+    "static/js/main.75c886c6.js"
   ]
 }
