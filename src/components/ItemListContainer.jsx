@@ -1,39 +1,113 @@
+//  import { useEffect, useState } from "react";
+//  import { collection, getDocs } from "firebase/firestore";
+//  import { db } from "../config/firebase"; 
+//  import Item from "./Item";
+//  import "../css/ItemListContainer.css";  
+//  const ItemListContainer = () => {
+//    const [productos, setProductos] = useState([]);
+
+//    useEffect(() => {
+//      const obtenerProductos = async () => {
+//        try {
+//          const querySnapshot = await getDocs(collection(db, "productos"));
+//          const productosFirebase = querySnapshot.docs.map((doc) => ({
+//            id: doc.id, 
+//            ...doc.data(),
+//         }));
+//          setProductos(productosFirebase);
+//        } catch (error) {
+//          console.error("Error obteniendo los productos:", error);
+//        }
+//      };
+
+//      obtenerProductos();
+//    }, []); 
+//    return (
+//      <div className="container"> {}
+//        <h2>Catálogo Old School</h2>
+//        <div className="grid"> {}
+//         {productos.map((producto) => (
+//            <Item key={producto.id} producto={producto} />
+//          ))}
+//        </div>
+//      </div>
+//    );
+//  };
+
+// export default ItemListContainer;
+
+
+/*************************************************************** */
+
+
+
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../config/firebase"; // Asegúrate de que esta ruta sea correcta
+import { useParams } from "react-router-dom"; // Importamos useParams para leer la categoría desde la URL
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../config/firebase";
 import Item from "./Item";
-import "../css/ItemListContainer.css";  // Importa el archivo CSS
+import "../css/ItemListContainer.css";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { categoria } = useParams(); // Obtenemos la categoría desde la URL
 
   useEffect(() => {
     const obtenerProductos = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "productos"));
+        let q;
+        const productosRef = collection(db, "productos"); // Referencia a la colección "productos"
+
+        if (categoria) {
+          // Si hay una categoría en la URL, filtramos en Firebase
+          q = query(productosRef, where("categoría", "==", categoria));
+        } else {
+          // Si no hay categoría, traemos todos los productos
+          q = productosRef;
+        }
+
+        const querySnapshot = await getDocs(q);
         const productosFirebase = querySnapshot.docs.map((doc) => ({
-          id: doc.id, // Asegúrate de agregar el id del documento
+          id: doc.id,
           ...doc.data(),
         }));
+
         setProductos(productosFirebase);
       } catch (error) {
         console.error("Error obteniendo los productos:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     obtenerProductos();
-  }, []); // Este useEffect se ejecuta una sola vez cuando el componente se monta
+  }, [categoria]); // Se ejecuta cada vez que cambia la categoría
 
   return (
-    <div className="container"> {/* Usar la clase de CSS */}
+    <div className="container">
       <h2>Catálogo Old School</h2>
-      <div className="grid"> {/* Usar la clase de CSS */}
-        {productos.map((producto) => (
-          <Item key={producto.id} producto={producto} />
-        ))}
-      </div>
+
+      {loading ? (
+        <p>Cargando productos...</p>
+      ) : (
+        <div className="grid">
+          {productos.length > 0 ? (
+            productos.map((producto) => <Item key={producto.id} producto={producto} />)
+          ) : (
+            <p>No hay productos en esta categoría.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };
 
 export default ItemListContainer;
+
+
+
+
+
+
+

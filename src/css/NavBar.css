@@ -1,42 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
 
 .navbar {
-  height: 250px;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url(https://images.unsplash.com/photo-1527383418406-f85a3b146499?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position:center;
+  background-position: center;
   background-attachment: fixed;
- 
+  padding-bottom: 20px;
 }
 
 .navbar-content {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   width: 90%;
+  padding-top: 20px;
 }
 
-h1{
-  
+h1 {
   font-size: 100px;
   font-family: "Molle", serif;
   font-weight: 800;
   font-style: italic;
   color: black;
   text-shadow: goldenrod 5px 0;
-  
+  letter-spacing: 2px;
 }
 
+/* Ícono del carrito */
 .cart-icon {
-  width: 80px;  /* Ajusta el tamaño de la imagen */
+  width: 80px;
   height: auto;
   margin-right: 8px;
 }
 
-.cart-icon:hover{
+.cart-icon:hover {
   transform: scale(1.1);
 }
 
@@ -45,8 +47,6 @@ h1{
   display: flex;
   align-items: center;
 }
-
-
 
 .cart-count {
   position: absolute;
@@ -62,5 +62,81 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
-  transform:  translate(5px, -5px);
+  transform: translate(5px, -5px);
 }
+
+/******************************************/
+/* Dropdown de Categorías */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  top:100px;
+}
+
+.dropbtn {
+  background: linear-gradient(45deg, white, #f8d347);
+  color: black;
+  padding: 15px 25px;
+  font-size: 22px;
+  font-family: "Molle", serif;
+  font-weight: 800;
+  font-style: italic;
+  border: 3px solid goldenrod;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px goldenrod;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.dropbtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px gold;
+}
+
+/* Contenedor del Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 200px;
+  border-radius: 15px;
+  border: 3px solid goldenrod;
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.8);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.dropdown-content.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilos de los links dentro del dropdown */
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 15px 25px;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Molle", serif;
+  font-weight: 800;
+  text-shadow: 1px 1px 3px goldenrod;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.dropdown-content a:hover {
+  background-color: goldenrod;
+  color: black;
+  text-shadow: 2px 2px 5px rgba(255, 255, 0, 0.7);
+  transform: scale(1.05);
+}
+
+
+

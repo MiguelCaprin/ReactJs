@@ -1,13 +1,13 @@
 import { useEffect } from "react";
-import "../css/Loader.css"; // Archivo CSS para la animación
+import "../css/Loader.css"; 
 
 const Loader = ({ onFinish }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      onFinish(); // Llamamos a la función para ocultar el loader
-    }, 3000); // 3 segundos
+      onFinish(); 
+    }, 3000); 
 
-    return () => clearTimeout(timer); // Cleanup en caso de desmontaje
+    return () => clearTimeout(timer); 
   }, [onFinish]);
 
   return (
