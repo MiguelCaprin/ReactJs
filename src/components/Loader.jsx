@@ -1,20 +1,20 @@
 import { useEffect } from "react";
-import "../css/Loader.css"; 
+import "../css/Loader.css";
+import reactLogo from "../images/reactlogo.png";  // Importa la imagen desde src/images/
 
 const Loader = ({ onFinish }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      onFinish(); 
-    }, 3000); 
+      onFinish();
+    }, 3000);
 
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
     <div className="loader-container">
-  <img src="/reactlogo.png" alt="Logo de Old School Classics" className="logo-animation" />
-</div>
-  
+      <img src={reactLogo} alt="Logo de Old School Classics" className="logo-animation" />
+    </div>
   );
 };
 

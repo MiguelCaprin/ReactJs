@@ -1,9 +1,8 @@
-
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import "../css/NavBar.css";
+import carritoImg from "../images/carrito.png"; // Importa la imagen aquí
 
 const NavBar = () => {
   const { getTotalItems } = useCart();
@@ -43,19 +42,15 @@ const NavBar = () => {
 
         {/* Carrito */}
         <Link to="/cart" className="cart-link">
-  <img src="/carrito.png" alt="Carrito" className="cart-icon" />
-  {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
-</Link>
-
+          <img src={carritoImg} alt="Carrito" className="cart-icon" />
+          {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+        </Link>
       </div>
     </nav>
   );
 };
 
 export default NavBar;
-
-
-
 
 
 
