@@ -12,8 +12,9 @@ const Loader = ({ onFinish }) => {
 
   return (
     <div className="loader-container">
-      <img src="/reactlogo.png" alt="Logo de Old School Classics" className="logo-animation" />
-    </div>
+    <img src={`${process.env.PUBLIC_URL}/reactlogo.png`} alt="Logo de Old School Classics" className="logo-animation" />
+  </div>
+  
   );
 };
 

@@ -13,15 +13,16 @@ const Footer = () => {
         </div>
         <div className="footer-social">
           <a href="https://facebook.com" target='blank' className="social-icon">
-            <img src="/facebook.png" alt="Facebook"  className="social-icon-img" />
+            <img src={`${process.env.PUBLIC_URL}/facebook.png`} alt="Facebook" className="social-icon-img" />
           </a>
           <a href="https://twitter.com" target='blank' className="social-icon">
-            <img src="/twiter.png" alt="Twitter" className="social-icon-img" />
+            <img src={`${process.env.PUBLIC_URL}/twiter.png`} alt="Twitter" className="social-icon-img" />
           </a>
           <a href="https://instagram.com" target='blank' className="social-icon">
-            <img src="/instagram.png" alt="Instagram" className="social-icon-img" />
+            <img src={`${process.env.PUBLIC_URL}/instagram.png`} alt="Instagram" className="social-icon-img" />
           </a>
         </div>
+
       </div>
     </footer>
   );
