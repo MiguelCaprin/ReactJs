@@ -43,9 +43,9 @@ const NavBar = () => {
 
         {/* Carrito */}
         <Link to="/cart" className="cart-link">
-          <img src={`${process.env.PUBLIC_URL}/carrito.png`} alt="Carrito" className="cart-icon" />
-          {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
-        </Link>
+  <img src="/carrito.png" alt="Carrito" className="cart-icon" />
+  {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+</Link>
 
       </div>
     </nav>
