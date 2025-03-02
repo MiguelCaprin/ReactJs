@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";  // Aquí mantenemos BrowserRouter
+import { HashRouter as Router, Route, Routes } from "react-router-dom";  // Aquí cambiamos a HashRouter
 import { CartProvider } from "./context/CartContext";
 import NavBar from "./components/NavBar";  // Importa el NavBar
 import ItemListContainer from "./components/ItemListContainer";
