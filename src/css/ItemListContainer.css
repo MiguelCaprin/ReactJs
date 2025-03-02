@@ -34,4 +34,48 @@
   }
   
   
-  
+  /***************mediaquery*************/
+
+  /* Media Queries */
+
+/* Para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    grid-auto-rows: 400px; /* Reducir la altura de las filas */
+  }
+
+  h2 {
+    font-size: 40px; /* Reducir el tamaño del título */
+  }
+}
+
+/* Para pantallas pequeñas (tabletas y teléfonos) */
+/* Para pantallas pequeñas (tabletas y teléfonos) */
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 producto por fila */
+    grid-auto-rows: 400px; /* Aumentar la altura de las filas para hacer las cajas más largas */
+    width: 98%;
+    gap: 15px; /* Espacio entre productos */
+  }
+
+  h2 {
+    font-size: 35px; /* Reducir el tamaño del título */
+    padding: 12px 20px; /* Reducir un poco el padding */
+  }
+}
+
+
+/* Para dispositivos móviles aún más pequeños */
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 producto por fila */
+    gap: 10px; /* Reducir aún más el espacio entre productos */
+  }
+
+  h2 {
+    font-size: 28px; /* Reducir el tamaño del título */
+    padding: 8px 15px; /* Reducir el padding del título */
+  }
+}

@@ -65,7 +65,7 @@ h1 {
   transform: translate(5px, -5px);
 }
 
-/******************************************/
+
 /* Dropdown de Categorías */
 .dropdown {
   position: relative;
@@ -140,3 +140,63 @@ h1 {
 
 
 
+
+
+
+
+/**********************mediaquery***********************/
+
+
+@media (max-width: 800px) {
+  .navbar-content {
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos */
+    padding-top: 10px;
+  }
+
+  h1 {
+    font-size: 120px; /* Reducir tamaño del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-align: center;
+  }
+
+  /* Carrito */
+  .cart-link {
+    margin-top: 60px; /* Aumenta el espacio entre el carrito y el dropdown */
+  }
+
+  .cart-icon {
+    width: 80px; /* Aumenta el tamaño del carrito */
+    height: auto; /* Mantiene la proporción */
+  }
+
+  /* Dropdown */
+  .dropdown {
+    margin-bottom: 90px;  /* Aumenta el espacio entre el carrito y el dropdown */
+  }
+
+  .dropbtn {
+    font-size: 30px; /* Aumenta el tamaño de la fuente del dropdown */
+    padding: 15px 25px; /* Aumenta el tamaño del botón */
+  }
+
+  .dropdown-content a {
+    padding: 14px 24px; /* Aumenta el tamaño de los enlaces */
+    font-size: 18px; /* Aumenta el tamaño de la fuente de los enlaces */
+  }
+}
+
+
+@media (max-width: 510px) {
+
+  h1{
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  h1{
+    font-size: 70px;
+  }
+}

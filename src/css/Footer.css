@@ -45,4 +45,50 @@
     transform: scale(1.1);  /* Efecto de agrandamiento */
   }
   
+  /*******************mediaquery**********************/
+
+  @media (max-width: 800px) {
+    .footer {
+      font-size: 18px;  /* Reducir el tamaño de fuente */
+    }
+  
+    .footer-social {
+      flex-direction: column; /* Coloca los íconos en una columna */
+      gap: 10px;
+    }
+  
+    .social-icon-img {
+      width: 80px; /* Reducir más el tamaño de los íconos */
+      height: 80px;
+    }
+  }
+
+  @media (max-width: 525px) {
+    .footer {
+      font-size: 16px;  /* Reducir aún más el tamaño de la fuente */
+      padding: 10px;  /* Reducir el padding */
+    }
+  
+    .footer-links {
+      font-size: 14px;  /* Reducir el tamaño de los enlaces */
+    }
+  
+    .footer-social {
+      flex-direction: column; /* Asegura que los íconos sigan en columna */
+      gap: 8px; /* Reducir el espacio entre los íconos */
+    }
+  
+    .social-icon-img {
+      width: 70px; /* Reducir aún más el tamaño de los íconos */
+      height: 70px;
+    }
+  }
+
+  @media (max-width: 442px) {
+    .footer-link {
+      display: flex;
+      font-size: 20px;  /* Reducir el tamaño de las letras de los enlaces */
+      flex-direction: column;
+    }
+  }
   

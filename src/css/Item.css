@@ -104,3 +104,42 @@
   font-weight: bold;
   color: goldenrod;
 }
+
+/******************mediaquery*************************/
+
+@media (max-width: 445px) {
+  .modal-content {
+    max-width: 300px; /* Reducir el tamaño máximo del modal */
+    width: 85%; /* Asegurarse de que el modal ocupe un poco menos del 100% */
+  }
+
+  .modal-image {
+    max-height: 150px; /* Reducir la altura máxima de la imagen */
+  }
+
+  .modal-content p {
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+  }
+
+  .close-modal {
+    font-size: 18px; /* Reducir el tamaño del botón de cerrar */
+  }
+}
+@media (max-width: 390px) {
+  .modal-content {
+    max-width: 250px; /* Reducir aún más el tamaño máximo del modal */
+    width: 90%; /* Asegurarse de que el modal ocupe un poco menos del 100% */
+  }
+
+  .modal-image {
+    max-height: 120px; /* Reducir la altura máxima de la imagen */
+  }
+
+  .modal-content p {
+    font-size: 11px; /* Reducir aún más el tamaño de la fuente */
+  }
+
+  .close-modal {
+    font-size: 16px; /* Reducir aún más el tamaño del botón de cerrar */
+  }
+}
