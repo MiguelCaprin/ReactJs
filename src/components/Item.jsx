@@ -1,6 +1,4 @@
-
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useCart } from "../context/CartContext";
 import "../css/Item.css";
 
@@ -8,20 +6,36 @@ const Item = ({ producto }) => {
   const { agregarAlCarrito } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Abrir modal
   const openModal = (e) => {
     if (!e.target.classList.contains("button")) {
       setIsModalOpen(true);
     }
   };
 
+  // Cerrar modal
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
+  // Agregar producto al carrito
   const agregarProducto = (e) => {
     e.stopPropagation();
     agregarAlCarrito(producto);
   };
+
+  // Deshabilitar el scroll del body cuando el modal está abierto
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden"; // Deshabilitar el scroll
+    } else {
+      document.body.style.overflow = "auto"; // Habilitar el scroll
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Restaurar al cerrar el componente
+    };
+  }, [isModalOpen]);
 
   return (
     <>
@@ -49,4 +63,3 @@ const Item = ({ producto }) => {
 };
 
 export default Item;
-

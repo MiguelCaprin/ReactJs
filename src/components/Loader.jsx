@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "../css/Loader.css";
-import reactLogo from "../images/reactlogo.png";
+import reactLogo from "../images/classics.webp";
 
 const Loader = ({ onFinish }) => {
   useEffect(() => {
