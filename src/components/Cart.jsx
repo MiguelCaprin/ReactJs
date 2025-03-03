@@ -17,7 +17,7 @@ const Cart = () => {
       <h2>Carrito de Compras</h2>
 
       {/* Mensaje de stock */}
-      {mensaje && <p className="stock-message">{mensaje}</p>} 
+      {mensaje && <p className="stock-message">{mensaje}</p>}
 
       {carrito.length === 0 ? (
         <div>

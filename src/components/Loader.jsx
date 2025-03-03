@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "../css/Loader.css";
-import reactLogo from "../images/reactlogo.png";  // Importa la imagen desde src/images/
+import reactLogo from "../images/reactlogo.png";
 
 const Loader = ({ onFinish }) => {
   useEffect(() => {

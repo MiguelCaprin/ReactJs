@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // Importamos useParams para leer la categoría desde la URL
+import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../config/firebase";
 import Item from "./Item";
@@ -9,19 +9,19 @@ import "../css/ItemListContainer.css";
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { categoria } = useParams(); // Obtenemos la categoría desde la URL
+  const { categoria } = useParams();
 
   useEffect(() => {
     const obtenerProductos = async () => {
       try {
         let q;
-        const productosRef = collection(db, "productos"); // Referencia a la colección "productos"
+        const productosRef = collection(db, "productos");
 
         if (categoria) {
-          // Si hay una categoría en la URL, filtramos en Firebase
+
           q = query(productosRef, where("categoría", "==", categoria));
         } else {
-          // Si no hay categoría, traemos todos los productos
+
           q = productosRef;
         }
 
@@ -40,7 +40,7 @@ const ItemListContainer = () => {
     };
 
     obtenerProductos();
-  }, [categoria]); // Se ejecuta cada vez que cambia la categoría
+  }, [categoria]);
 
   return (
     <div className="container">

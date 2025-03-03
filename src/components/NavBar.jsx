@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import "../css/NavBar.css";
-import carritoImg from "../images/carrito.png"; // Importa la imagen aquí
+import carritoImg from "../images/carrito.png";
 
 const NavBar = () => {
   const { getTotalItems } = useCart();

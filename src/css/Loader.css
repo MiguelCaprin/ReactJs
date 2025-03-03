@@ -1,25 +1,55 @@
 @keyframes flashGlow {
-    0% {
-      opacity: 0;
-      filter: brightness(5);
-      transform: scale(1.2); /* Comienza un poco más grande */
-    }
-    50% {
-      opacity: 1;
-      filter: brightness(1);
-      transform: scale(1); /* Vuelve a su tamaño normal */
-    }
-  }
-  
-  .logo-animation {
-    width: 90vw; /* Un tamaño grande pero sin pasarse */
-    max-width: 100%; /* Evita que sea más ancho de lo necesario */
-    height: auto; /* Mantiene la proporción */
-    max-height: 80vh; /* Limita la altura para que no se corte */
-    display: block; /* Asegura que no haya margen extra */
-    margin: 0 auto; /* Lo centra en la pantalla */
-    animation: flashGlow 2s ease-in-out;
+  0% {
+    opacity: 0;
+    filter: brightness(5);
+    transform: scale(1.2);
   }
 
-  
-  
+  50% {
+    opacity: 1;
+    filter: brightness(1);
+    transform: scale(1);
+  }
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 9999;
+}
+
+.logo-animation {
+  width: 90vw;
+  height: 90vh;
+  object-fit: contain;
+  border-radius: 50%;
+  animation: flashGlow 2s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .logo-animation {
+    width: 80vw;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo-animation {
+    width: 85vw;
+    height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-animation {
+    width: 100vw;
+    height: 100vh;
+  }
+}

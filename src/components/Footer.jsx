@@ -1,8 +1,8 @@
 import React from 'react';
 import '../css/Footer.css';
-import facebookImg from '../images/facebook.png';  // Importa la imagen de Facebook
-import twitterImg from '../images/twitter.png';    // Importa la imagen de Twitter
-import instagramImg from '../images/instagram.png'; // Importa la imagen de Instagram
+import facebookImg from '../images/facebook.png';
+import twitterImg from '../images/twitter.png';
+import instagramImg from '../images/instagram.png';
 
 const Footer = () => {
   return (

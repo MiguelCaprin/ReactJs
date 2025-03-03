@@ -70,7 +70,7 @@ h1 {
 .dropdown {
   position: relative;
   display: inline-block;
-  top:100px;
+  top: 100px;
 }
 
 .dropbtn {
@@ -114,7 +114,7 @@ h1 {
   transform: translateY(0);
 }
 
-/* Estilos de los links dentro del dropdown */
+
 .dropdown-content li {
   list-style: none;
 }
@@ -149,54 +149,54 @@ h1 {
 
 @media (max-width: 800px) {
   .navbar-content {
-    flex-direction: column; /* Alinea los elementos en columna */
-    align-items: center; /* Centra los elementos */
+    flex-direction: column;
+    align-items: center;
     padding-top: 10px;
   }
 
   h1 {
-    font-size: 120px; /* Reducir tamaño del título */
-    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 120px;
+    margin-bottom: 20px;
     text-align: center;
   }
 
   /* Carrito */
   .cart-link {
-    margin-top: 60px; /* Aumenta el espacio entre el carrito y el dropdown */
+    margin-top: 60px;
   }
 
   .cart-icon {
-    width: 80px; /* Aumenta el tamaño del carrito */
-    height: auto; /* Mantiene la proporción */
+    width: 80px;
+    height: auto;
   }
 
   /* Dropdown */
   .dropdown {
-    margin-bottom: 90px;  /* Aumenta el espacio entre el carrito y el dropdown */
+    margin-bottom: 90px;
   }
 
   .dropbtn {
-    font-size: 30px; /* Aumenta el tamaño de la fuente del dropdown */
-    padding: 15px 25px; /* Aumenta el tamaño del botón */
+    font-size: 30px;
+    padding: 15px 25px;
   }
 
   .dropdown-content a {
-    padding: 14px 24px; /* Aumenta el tamaño de los enlaces */
-    font-size: 18px; /* Aumenta el tamaño de la fuente de los enlaces */
+    padding: 14px 24px;
+    font-size: 18px;
   }
 }
 
 
 @media (max-width: 510px) {
 
-  h1{
+  h1 {
     font-size: 80px;
   }
 }
 
 @media (max-width: 380px) {
 
-  h1{
+  h1 {
     font-size: 70px;
   }
 }

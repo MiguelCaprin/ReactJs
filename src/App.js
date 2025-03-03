@@ -1,19 +1,19 @@
 
 import { useState } from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";  // Aquí cambiamos a HashRouter
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
-import NavBar from "./components/NavBar";  // Importa el NavBar
+import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
-import Cart from "./components/Cart"; 
+import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
-import Loader from "./components/Loader"; // Importamos el Loader
-import Footer from './components/Footer';  // Importa el Footer
+import Loader from "./components/Loader";
+import Footer from './components/Footer';
 import './css/App.css';
-import { useCart } from "./context/CartContext";  // Usamos el hook del carrito
+import { useCart } from "./context/CartContext";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const { carrito } = useCart();  // Obtenemos el carrito desde el contexto
+  const { carrito } = useCart();
 
   return (
     <CartProvider>

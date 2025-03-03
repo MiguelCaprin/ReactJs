@@ -22,7 +22,7 @@ const Checkout = () => {
       return;
     }
     setMensaje("Compra exitosa. ¡Gracias por tu compra!");
-    vaciarCarrito(); 
+    vaciarCarrito();
   };
 
   return (

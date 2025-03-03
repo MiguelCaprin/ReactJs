@@ -1,16 +1,8 @@
-
-
 body {
-    font-family: Arial, sans-serif;
-    background: rgb(10,10,10);
-    background: linear-gradient(90deg, rgba(10,10,10,1) 95%, rgba(112,111,5,1) 100%);
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
- 
-
-  div {
-    padding: 20px;
-  }
-   
+  font-family: Arial, sans-serif;
+  background: black;
+  background: linear-gradient(90deg, rgba(10, 10, 10, 1) 95%, rgba(112, 111, 5, 1) 100%);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
