@@ -19,3 +19,4 @@ const Loader = ({ onFinish }) => {
 };
 
 export default Loader;
+

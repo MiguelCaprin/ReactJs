@@ -1,4 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
+@keyframes slideInTitle {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInCart {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDropdown {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 .navbar {
   width: 100%;
@@ -19,6 +50,7 @@
   align-items: center;
   width: 90%;
   padding-top: 20px;
+  animation: slideInTitle 1s ease-out forwards;
 }
 
 h1 {
@@ -29,9 +61,16 @@ h1 {
   color: black;
   text-shadow: goldenrod 5px 0;
   letter-spacing: 2px;
+  animation: slideInTitle 1s ease-out forwards;
 }
 
-/* Ícono del carrito */
+.cart-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  animation: slideInCart 1s ease-out forwards;
+}
+
 .cart-icon {
   width: 80px;
   height: auto;
@@ -40,12 +79,6 @@ h1 {
 
 .cart-icon:hover {
   transform: scale(1.1);
-}
-
-.cart-link {
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .cart-count {
@@ -65,12 +98,11 @@ h1 {
   transform: translate(5px, -5px);
 }
 
-
-/* Dropdown de Categorías */
 .dropdown {
   position: relative;
   display: inline-block;
   top: 100px;
+  animation: slideInDropdown 1s ease-out forwards;
 }
 
 .dropbtn {
@@ -93,7 +125,6 @@ h1 {
   box-shadow: 0 0 25px gold;
 }
 
-/* Contenedor del Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -113,7 +144,6 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 .dropdown-content li {
   list-style: none;
@@ -137,15 +167,6 @@ h1 {
   text-shadow: 2px 2px 5px rgba(255, 255, 0, 0.7);
   transform: scale(1.05);
 }
-
-
-
-
-
-
-
-/**********************mediaquery***********************/
-
 
 @media (max-width: 800px) {
   .navbar-content {
@@ -186,16 +207,13 @@ h1 {
   }
 }
 
-
 @media (max-width: 510px) {
-
   h1 {
     font-size: 80px;
   }
 }
 
 @media (max-width: 380px) {
-
   h1 {
     font-size: 70px;
   }

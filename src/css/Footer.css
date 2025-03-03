@@ -1,3 +1,25 @@
+@keyframes slideInFooterLinks {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFooterSocialIcons {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .footer {
   background: rgb(10, 10, 10);
   background: linear-gradient(90deg, rgba(10, 10, 10, 1) 95%, rgba(112, 111, 5, 1) 100%);
@@ -5,6 +27,7 @@
   padding: 20px;
   text-align: center;
   font-size: 30px;
+  animation: slideInFooterLinks 1s ease-out forwards;
 }
 
 .footer-content {
@@ -15,12 +38,16 @@
 
 .footer-links {
   margin-top: 10px;
+  animation: slideInFooterLinks 1s ease-out forwards;
 }
 
 .footer-link {
   color: #fff;
   margin: 0 10px;
   text-decoration: none;
+  opacity: 0;
+  animation: slideInFooterLinks 1s ease-out forwards;
+  animation-delay: 0.5s; /* Slight delay to stagger animations */
 }
 
 .footer-link:hover {
@@ -29,6 +56,11 @@
 
 .footer-social {
   margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  opacity: 0;
+  animation: slideInFooterSocialIcons 1s ease-out forwards;
+  animation-delay: 1s; /* Slight delay to stagger animations */
 }
 
 .social-icon {
@@ -39,11 +71,12 @@
 .social-icon-img {
   width: 70px;
   height: 70px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, rotate 0.3s ease;
 }
 
 .social-icon-img:hover {
   transform: scale(1.1);
+  rotate: 15deg;
 }
 
 /*******************mediaquery**********************/
